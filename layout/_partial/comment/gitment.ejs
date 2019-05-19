@@ -1,7 +1,7 @@
 <% if(theme.comment.gitment_owner && theme.comment.gitment_repo && theme.comment.gitment_client_id && theme.comment.gitment_client_secret) { %>
 <div id="container"></div>
-<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<link rel="stylesheet" href="<%- url_for('css/gitment.css') %>">
+<script src="<%- url_for('scripts/gitment.browser.js') %>"></script>
 <script>
     var gitment = new Gitment({
         // id: "<%- page.title %>", // 可选。默认为 location.href
@@ -10,6 +10,7 @@
         oauth: {
             client_id: '<%- theme.comment.gitment_client_id %>',
             client_secret: '<%- theme.comment.gitment_client_secret %>',
+            oauth_service: '<%- theme.comment.gitment_oauth_service %>',
         },
     })
     gitment.render('container')

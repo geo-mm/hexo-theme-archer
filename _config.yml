@@ -79,6 +79,8 @@ comment:
   gitment_repo: 
   gitment_client_id: 
   gitment_client_secret: 
+  # Gitmet external oauth server address, leave it blank for github pages
+  gitment_oauth_service:
   # Youyan  site: http://www.uyan.cc/
   youyan_uid: 
   # Valine  site: https://valine.js.org/

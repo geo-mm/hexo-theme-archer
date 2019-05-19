@@ -1,5 +1,28 @@
+修改版 hexo archer theme
+========================
+
+原本 theme 出處: [archer](http://fi3ework.github.io/archer-demo)
+
+因為原來的留言功能有點問題, 所以只好自己參照下列文章動手修改,
+
+1. [連結1](https://github.com/imsun/gitment/issues/178)
+2. [連結2](https://segmentfault.com/a/1190000018177680)
+
+## 說明
+
+### 修改 Gitmet
+
+Fork 並更新 [gitment](https://github.com/geo-mm/gitment) 部份, 新增 oauth_service 選項. 
+如果 oauth_server 不給值則內定使用 github oauth 認證(只能用於 github pages).
+
+### 修改 archer
+
+修改 `gitment.ejs` 並在 `_config.yml` 新增 `gitment_oauth_service` 選項讓使用者可以自行輸入 oauth server 位置.
+
 hexo-theme-archer
 ================
+
+
 
 ![preview](./docs/snap.png)
 
